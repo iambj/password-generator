@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+
+
+  </head>
+  <body>
+    <input type="button" name="gen" value="Generate" id = "genBtn">
+
+      <div>
+        Password:
+        <div id="result"></div>
+      </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+var entropy = "";
+var btn = document.getElementById("genBtn");
+
+function genNumber(n){
+
+};
+
+function generate(n) {
+  for(var i = 0; i <= n; i++){
+    console.log(i);
+  };
+};
+
+btn.addEventListener('click', function(){
+  generate(2);
+}, false);
+
+document.addEventListener('mousemove', testMouse, false);
+
+function testMouse(){
+  var ent = (event.clientX + "" + event.clientY).substring(2, 5);
+  entropy += ent;
+  console.log(ent);
+
+}
+
+function entropyLength(){
+  console.log("Bits of entropy: " + (Math.floor(entropy.length*8)));
+}
+
+</script>
