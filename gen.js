@@ -4,7 +4,7 @@ var target = document.getElementById(targID);
 var btn = document.getElementById(genBtn);
 var progBar = document.getElementById("inner");
 var entLength = document.getElementById("ent");
-var entropyLength = 1024*1 //1kbyte in bits
+var entropyLength = 1024*0.25 //1kbyte in bits
 var pool = "";
 
 function updateDiv(t, f) {
@@ -56,13 +56,19 @@ var throttle = function(time, scope, callback, args){
     return true;
 };
 
+function pickWord(){
+    num = Math.floor(Math.random() * words.length)
+    return words[num];
+}
+
 function generate(){
     if(pool.length >= entropyLength){
         var one = (pool.charAt(Math.floor(Math.random()*100)));
         var two = (pool.charAt(Math.floor(Math.random()*100)));
         var three = (pool.charAt(Math.floor(Math.random()*100)));
         var four = (pool.charAt(Math.floor(Math.random()*100)));
-        console.log("" + one + two + "Drive" + three + four);
+        console.log("" + one + two + pickWord() + three + four);
     }
 
 }
+console.log(words)
