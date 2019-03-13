@@ -1,24 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" type="text/css" href="css.css" />
+        <title>Simple Password Generator</title>
     </head>
+
     <body>
-        <input type="button" name="genBtn" value="Generate" id="genBtn">
-        
-        <div id="results">
-        </div>
-        
+        <input type="button" name="genBtn" value="Generate" id="genBtn" />
         <div id="entropy">
             <div id="data">
-                Entropy Length: 
+                Entropy Length:
                 <div id="ent"></div>
             </div>
             <div id="entropyBar">
                 <div id="inner"></div>
             </div>
+            <div id="results"></div>
         </div>
     </body>
 </html>
-        
+
 <script type="text/javascript" src="words.js"></script>
 <script type="text/javascript" src="gen.js"></script>
